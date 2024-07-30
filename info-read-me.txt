@@ -1,5 +1,10 @@
                                         Короткі відомості
 
 Вступ.
-    Перходимо на сайт https://start.spring.io/ і складаємо проєкт.
+    - Перходимо на сайт https://start.spring.io/ і складаємо проєкт.
     Або ж можна створюти через IntelliJ IDEA, вибираєчи Spring i додаючи залежності.
+    - Запускаємо проєктчерез файл src/main/java/..
+    - заходимо в localhost:8080 (поки бачимо Whitelabel Error Page)
+
+Початок роботи.
+    - спворимо package - controller/BasicController.java

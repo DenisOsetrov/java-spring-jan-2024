@@ -11,3 +11,8 @@ public class SpringDemoProjectApplication {
 	}
 
 }
+// Пояснення анотації @SpringBootApplication:
+		//Це комплексна анотація, яка об'єднує три інші:
+			//@Configuration: Дозволяє використовувати методи з анотацією @Bean для визначення бінів в контексті Spring.
+			//@EnableAutoConfiguration: Вказує Spring Boot автоматично налаштувати додаток на основі наявних залежностей.
+			//@ComponentScan: Сканує пакет і всі підпакети, щоб знайти компоненти з анотаціями, такими як @Component, @Service, @Repository, і @Controller.
