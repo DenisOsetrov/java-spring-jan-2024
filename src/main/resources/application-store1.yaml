@@ -11,3 +11,9 @@ reference-data:
       address:
         city: "Lviv"
         street: "Street 2"
+
+#  reference-data.categories: Це список категорій товарів, які зберігаються у вигляді рядка.
+#            Цей рядок розбивається на список у Java за допомогою анотації @Value.
+
+#  reference-data.offices: Це список офісів, які зберігаються як об'єкти з полями name,
+#            contactNumber, та address. address також є об'єктом, який містить поля city та street.

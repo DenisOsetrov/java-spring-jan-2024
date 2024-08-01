@@ -1,10 +1,88 @@
-                                        Короткі відомості
+                              Короткий план розробки Spring Boot додатку
 
-Вступ.
-    - Перходимо на сайт https://start.spring.io/ і складаємо проєкт.
-    Або ж можна створюти через IntelliJ IDEA, вибираєчи Spring i додаючи залежності.
-    - Запускаємо проєктчерез файл src/main/java/..
-    - заходимо в localhost:8080 (поки бачимо Whitelabel Error Page)
+Вступ
+    Створення проекту Spring Boot:
+    Перейдіть на сайт Spring Initializr.
 
-Початок роботи.
-    - спворимо package - controller/BasicController.java
+        Оберіть наступні налаштування:
+            Project: Maven Project
+            Language: Java
+            Spring Boot: Найновішу стабільну версію (наприклад, 3.3.2)
+            Project Metadata:
+            Group: org.okten
+            Artifact: java-spring-jan-2024
+            Name: Spring Demo Project
+            Description: Demo project for Spring Boot
+            Package Name: org.okten.java.spring.jan2024
+            Packaging: Jar
+            Java Version: 17
+        Dependencies: Додайте наступні залежності:
+            Spring Web
+            Lombok
+            Spring Boot DevTools (для полегшення розробки)
+            Spring Boot Configuration Processor
+        Завантажте проект та розпакуйте його на вашому комп'ютері.
+
+
+Альтернативний спосіб (через IntelliJ IDEA):
+    Відкрийте IntelliJ IDEA.
+            Оберіть File > New > Project.
+            Оберіть Spring Initializr.
+            Введіть ті ж метадані проекту, що і в Spring Initializr.
+            Додайте ті ж залежності.
+
+
+Запуск проекту:
+     Перейдіть до папки src/main/java/org/okten/java/spring/jan2024.
+     Відкрийте файл SpringDemoProjectApplication.java.
+     Запустіть його, натиснувши на зелену стрілку або через контекстне меню Run 'SpringDemoProjectApplication'.
+
+
+Перевірте, що сервер запустився, відвідавши http://localhost:8080 у вашому веб-браузері.
+Ви повинні побачити сторінку Whitelabel Error Page, що означає, що сервер працює.
+
+
+Початок роботи
+
+    Створення простого контролера:
+        Створіть пакет controller.
+        Додайте новий клас BasicController.java в цей пакет:
+
+    Запустіть проект знову і перевірте, що http://localhost:8080/hello
+    повертає рядок "Hello from Basic Controller!".
+
+
+    Створення конфігураційних файлів:
+        У директорії src/main/resources, створіть файл application.yaml.
+        Додайте файл application-store1.yaml:
+        Додайте ще один файл application-store2.yaml,
+        якщо потрібно налаштувати інші конфігурації для іншого профілю:
+
+
+    Створення класу для обробки конфігурацій:
+        Створіть клас ReferenceDataProperties у пакеті properties:
+        Створіть клас Office у пакеті properties:
+        Створіть клас Address у пакеті properties:
+
+
+
+Розширення контролера для роботи з конфігураційними даними:
+    Створіть ReferenceDataController для обробки запитів з використанням конфігураційних даних:
+
+
+
+Завершення роботи
+    Запуск проекту з профілем:
+
+        Запустіть проект, переконавшись, що у application.yaml активний потрібний профіль (наприклад, store1).
+
+            Перевірте роботу API, викликавши відповідні методи:
+            GET /reference-data/categories - повертатиме категорії.
+            GET /reference-data/offices - повертатиме всі офіси.
+            GET /reference-data/offices?city=Kyiv - повертатиме офіси в зазначеному місті.
+            GET /reference-data/offices/{name} - повертатиме офіс за назвою.
+
+
+Розширення та тестування:
+        Додайте більше методів і розширте API для нових функціональностей.
+        Напишіть тести для контролерів і сервісів, щоб переконатися в їх коректній роботі.

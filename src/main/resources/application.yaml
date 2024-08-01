@@ -1,5 +1,13 @@
 spring:
+
   application:
     name: Spring Boot Demo Project
+
   profiles:
     active: store1
+
+#    spring.application.name: Це ім'я додатка.
+#      Воно може бути використано для ідентифікації вашого додатка в системах моніторингу та логування.
+
+#    spring.profiles.active: Це активний профіль конфігурації. У цьому випадку, активним є профіль store1,
+#      який вказує на використання файлу application-store1.yaml.
